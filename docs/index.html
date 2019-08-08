@@ -30,7 +30,8 @@
   firebase.initializeApp(firebaseConfig);
 </script>
 
-<script>
+<script type="text/javascript">
+(function () {
 ui.start('#firebaseui-auth-container', {
   signInOptions: [
     {
@@ -39,6 +40,7 @@ ui.start('#firebaseui-auth-container', {
     }
   ]
 });
+})();
 </script>
 </body>
 
