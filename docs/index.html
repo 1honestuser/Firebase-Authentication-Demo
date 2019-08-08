@@ -8,7 +8,7 @@
      Your app may use that space for branding, controls and other customizations.-->
 <h1>Welcome to My Awesome App</h1>
 <div id="login-state">Loading...</div>
-<div id="logout"><a href="firebase.auth().signOut();">Logout</a></div>
+<div id="logout"><a href="javascript:firebase.auth().signOut();">Logout</a></div>
 <div id="firebaseui-auth-container"></div>
 <div id="loader">Loading...</div>
 
@@ -81,7 +81,7 @@ var uiConfig = {
 // Display the login state
 firebase.auth().onAuthStateChanged(function(user) {
 	var msg=JSON.stringify(user);
-	document.getElementById('login-state').innerHTML = msg;
+	document.getElementById('login-state').innerHTML = 'user: '+msg;
 });
 
 // Really start the UI
